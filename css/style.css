@@ -1,0 +1,40 @@
+* {
+    background-color: red;
+    font-family:Tahoma;
+}
+
+body {
+    background-color:aqua;
+    text-align: center;
+    color: cornflowerblue;
+}
+
+h1 {
+    color:blue;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+}
+
+#heading {
+    background-color: blueviolet;
+    color: white;
+}
+#heading2 {
+    background-color: green;
+    color: white;
+}
+#heading3 {
+    background-color: cyan;
+    color: white;
+}
+#heading4 {
+    background-color: yellow;
+    color: black;
+}
+
+.div1 {
+    background-color: cyan;
+}
