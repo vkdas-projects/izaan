@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Session 13</title>
+        <style>
+            body {
+                text-align: center;
+                background-color: rgb(214, 231, 223);
+                color: rgb(56, 55, 55);
+                font-family: Tahoma;
+            }
+
+            fieldset {
+                padding: 30px;
+            }
+
+            .a {
+                color:red
+            }
+
+            .b {
+                color: royalblue;
+            }
+
+            .c {
+                color:salmon
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Form Attributes</h1>
+        <h2 class="a"><marquee>1. Action</marquee></h2>
+        <marquee direction="right" behaviour="alternate"><h2 class="b">2. Target</h2></marquee>
+        <h2 class="c"><marquee>3. Method</marquee></h2>
+        <form target="_top" action="https://www.google.com/" method="GET">
+            <fieldset>
+                <legend>User Details Form</legend>
+                <label for="fname">First Name : </label>
+                <input type="text"><br><br>
+                <label for="lname">Last Name : </label>
+                <input type="text"><br><br>
+                <label for="food">Select Choice of Food : </label>
+                <input list = "food">
+                    <datalist id="food">
+                        <option value="Vegetarian">
+                        <option value="Non-Vegetarian">
+                    </datalist><br><br>
+                <label for="address">Enter Your Address : </label>  
+                <textarea cols="30" rows="5"></textarea><br><br><br>
+                <input type="submit" value='Submit Form'>  
+            </fieldset>
+        </form>
+    </body>
+</html>
