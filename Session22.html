@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Session 22</title>
+        <style>
+            body {
+                background-color: blanchedalmond;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="head">JavaScript Intro</h1>
+        <h2>Canvas</h2>
+        <h1 id="intro"></h1>
+        <canvas id="mycanvas" width="500" height="500" style="border: 2px solid black;"></canvas>
+   
+    <script>
+        var can = document.getElementById('mycanvas');
+        var ctx = can.getContext('2d');
+
+        // ctx.moveTo(0,0); 
+        // ctx.lineTo(200,300);
+        // ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(325,150,50,0,2 * Math.PI);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(150,150,50,0,2 * Math.PI);
+        ctx.stroke();
+        
+        ctx.moveTo(220,300); 
+        ctx.lineTo(240,320);
+        ctx.stroke();
+        ctx.moveTo(240,320); 
+        ctx.lineTo(260,300);
+        ctx.stroke();
+
+        ctx.strokeStyle = 'red';
+        ctx.lineWidth = '2'
+
+        ctx.strokeRect(200,200,80,40);
+        ctx.fillRect(300,300,100,120);
+
+        ctx.strokeStyle = 'orange';
+        ctx.fillStyle = 'red'
+        ctx.font = '30px Cambria';
+        ctx.fillText('Vijay', 60, 50);
+        ctx.strokeText('Krishna',125, 50);
+
+    </script> 
+    </body>
+</html>
