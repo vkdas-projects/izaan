@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Session 26</title>
+        <style>
+            body{
+                background-color: black;
+                color: white;
+                text-align: center;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Web Storage</h1>
+        <h2>1. Session Storage</h2>
+        <h2>2. Local Storage</h2>
+        <p id="local-storage"></p>
+        <p id="session-storage"></p>
+        <input type="button" value="Local Storage" onclick="locStorage()">
+        <input type="button" value="Session Storage" onclick="sessStorage()">
+    <script>
+        function locStorage(){
+            if(typeof(Storage) !== "undefined")
+            {
+                if(localStorage.clickcount)
+                {
+                    localStorage.clickcount = Number(localStorage.clickcount) + 1;
+                }
+                else
+                {
+                    localStorage.clickcount = 1;
+                }
+                var loc = document.getElementById('local-storage');
+                loc.innerHTML = "The Local Storage Button has been clicked " +localStorage.clickcount+ " times";
+            }
+            else 
+            {
+                var error = document.getElementById('local-storage');
+                error.innerHTML = "The Browser does not support local storage";
+            }
+        }
+        function sessStorage(){
+            if(typeof(Storage) !== "undefined")
+            {
+                if(sessionStorage.clickcount)
+                {
+                    sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+                }
+                else
+                {
+                    sessionStorage.clickcount = 1;
+                }
+                var sess = document.getElementById('session-storage');
+                sess.innerHTML = "The Session Storage Button has been clicked " +sessionStorage.clickcount+ " times";
+            }
+            else 
+            {
+                var error = document.getElementById('local-storage');
+                error.innerHTML = "The Browser does not support local storage";
+            }
+        }
+    </script>
+    </body>
+</html>
