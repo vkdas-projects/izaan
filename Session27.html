@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Session 27</title>
+        <style>
+            body {
+                background-color: aquamarine;
+                color: blueviolet;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            #box {
+                width: 300px;
+                height: 250px;
+                border: 2px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Drag and Drop</h1>
+        <div id="box" ondrop="drop(event)" ondragover="dragAndDrop(event)"></div>
+        <img id="img" draggable="true" ondragstart="drag(event)" height="200" width="275" src="images/fooddesign.jpg" alt="This is an image of Food">
+        <input type="button" value="Get Item" onclick="getItem()">
+        <p id="item"></p>
+<script>
+            function dragAndDrop(e){
+                e.preventDefault();
+            }
+
+            function drag(e){
+                e.dataTransfer.setData("text",e.target.id);
+            }
+
+            function drop(e){
+                e.preventDefault();
+                var img = e.dataTransfer.getData("text");
+
+                e.target.appendChild(document.getElementById(img));
+            }
+            function getItem(){
+            if(typeof(Storage) !== "undefined")
+            {
+                var name = localStorage.getItem("name");
+                var item = document.getElementById('item');
+                item.innerHTML = name;
+            }
+            else 
+            {
+                var error = document.getElementById('local-storage');
+                error.innerHTML = "The Browser does not support local storage";
+            }
+        }
+        </script>
+    </body>
+</html>
