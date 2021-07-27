@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>Session 32</title>
+        <style>
+            body {
+                background-color: orange;
+                color: white;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>JavaScript Data types</h1>
+        <h2>1. String</h2>
+        <h2>2. Number</h2>
+        <h2>3. Boolean</h2>
+        <h2>4. Array</h2>
+        <h2>5. Object / JSON</h2>
+        <h2>6. NULL</h2>
+        <p id="show"></p>
+        <input type="button" value="Show Data Type" onclick="showDataType()">
+        <input type="button" value="Show Data" onclick="showData()">
+    </body>
+    <script>
+        var para = document.getElementById('show');
+
+        var data = "Izaan";
+        var data2 = 5;
+        var data3 = true;
+        var data4 = [32,34,36,43,52,];
+        var data5 = { 
+                        firstname: "Vijay" ,
+                        lastname: "Krishna",
+                        age: 23,
+                        address: {
+                            street: 15,
+                            country: "India",
+                            yaay: {
+                                hello: "YEY"
+                            }
+                        }
+                    }
+        var data6 = [
+
+                    {
+                        name : "Izaan",
+                        age: 13,
+                        class: 8,
+                        hobbies: [
+                            {
+                                sport: "Cricket",
+                                games: "Cricket19, f12020"
+                            }
+                        ]
+                    },
+                    {
+                        name: "Vijay",
+                        age: 23,
+                        class: "noclass",
+                        hobbies: [
+                            {
+                                sport: "Football",
+                                games: "CSGO, Valorant"
+                            }
+                        ]
+                    }
+
+        ];
+
+        data7 = null;
+
+        function showDataType()
+        {
+            para.innerHTML ="The data type of Izaan is " +typeof(data) + 
+            ". The data type of 5 is " +typeof(data2) +
+            ". The data type of true is " +typeof(data3) +
+            ". The data type of [] is " +typeof(data4) +
+            ". The data type of [] is " +typeof(data5) 
+            ;
+           
+        }
+
+
+        function showData()
+        {
+            para.innerHTML = data7
+           
+        }
+    </script>
+</html>
