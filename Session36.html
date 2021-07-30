@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Session 36</title>
+        <style>
+            body{
+                background-color: #003638;
+                color: #53B8BB;
+                font-family: cursive;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>HTML Image Maps</h1>
+        <img width="200" height="200" src="button.jfif" alt="button" usemap="#buttonMap">
+        <img height="200" width="250" src="button2.jpg" alt="button" usemap="#circleButton">
+        <img height="200" width="200"  src="triangle.png" alt="triangle" usemap="#triangle">
+        <map name="buttonMap">
+            <area shape="rect" coords="50,50,150,150" href="https://www.google.com/" >
+        </map>
+        <map name="circleButton">
+            <area shape="circle" 
+            coords="125,75,50" 
+            href="https://www.google.com/" 
+            alt="google">
+        </map>
+        <map name="triangle">
+            <area shape="poly"
+             coords="10,160 100,10 190,160" 
+             href="https://www.google.com/" 
+             alt="">
+        </map>
+    </body>
+</html>
