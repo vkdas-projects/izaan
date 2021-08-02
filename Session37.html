@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>Session 37</title>
+        <style>
+            body {
+                text-align: center;
+                background-color: #382345;
+                color: white;
+                font-family: cursive
+            }
+
+            .box {
+                background-color: red;
+                height: 200px;
+                width: 200px;
+                margin: auto;
+                border-radius: 20px;
+              
+            }
+
+           .box2 {
+                background-color: red;
+                height: 200px;
+                width: 200px;
+                margin: auto;
+                border-radius: 20px;
+                margin-top: 20px;
+                transition: 1s ease-in;
+              
+            }
+
+            .box2:hover {
+                background-color: blue;
+                height: 300px;
+            }
+
+
+            .box:hover{
+                animation-name: changecolor-shape;
+                animation-duration: 4s;
+            }
+
+            @keyframes changecolor-shape {
+                0%{
+                    background-color: cyan;
+                }
+
+                25%{
+                    background-color: black;
+
+                }
+
+                50%{
+                    background-color: aquamarine;
+                    height:  400px;
+                }
+
+                75%{
+                    background-color: coral;
+                }
+
+                100%{
+                    background-color: red;
+                    border-radius: 20px;
+                    height:200px;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>CSS Animations & Transitions</h1>
+        <div class="box"></div>
+        <div class="box2"></div>
+    </body>
+</html>
