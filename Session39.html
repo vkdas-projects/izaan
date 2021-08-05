@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Session 39</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+            body{
+                background: #002366;
+                color: #FA8072;
+                font-family: 'Quicksand', sans-serif;
+                text-align: center;
+            }
+
+            #inputbox1 , #inputbox2{
+                padding: 10px;
+                margin: 0 10px;
+                font-family: 'Quicksand', sans-serif;
+            }
+
+            button {
+                font-family: 'Quicksand', sans-serif;
+                margin-top: 10px;
+                padding: 10px;
+                background-color: #FFDAB9;
+                border-radius: 5px;
+                border: 3px solid #FA8072;
+                font-weight: bold;
+                transition: 0.2s ease-in;
+    
+            }
+
+            button:hover {
+                background-color: #FA8072;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Multiplication Table</h1>
+        <input id="inputbox1" type="text" placeholder="Enter Number">
+        <input id="inputbox2" type="text" placeholder="Enter Multiple"><br>
+        <button onclick="Calculate()">Calculate</button>
+        <h2 id="result"></h2>
+    </body>
+    <script>
+        function Calculate()
+        {
+            var box1 = parseInt(document.getElementById('inputbox1').value);
+            var box2 = parseInt(document.getElementById('inputbox2').value);
+
+            var count = 1;
+
+            while(count <= box2)
+            {
+                var product = box1 * count;
+                var element = document.createElement('h2');
+                element.innerText = box1+ " X " +count+ " = " +product; 
+                document.body.append(element);
+                count = count + 1;
+            }
+        }
+    </script>
+</html>
