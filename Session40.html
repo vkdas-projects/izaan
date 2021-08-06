@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Session 40</title>
+        <style>
+            body {
+                background: linear-gradient(cyan, royalBlue);
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Exception Handling</h1>
+        <h2 id="error"></h2>
+        <h2>Custom Error Message</h2>
+        <h2 id="custom"></h2>
+        <h2>Type Error</h2>
+        <h2 id="type"></h2>
+        <h2>Syntax Error</h2>
+        <h2 id="syntax"></h2>
+    </body>
+    <script>
+        try {
+            add(10 + 20);
+        }
+        catch(e){
+            document.getElementById('error').innerText = e;
+        }
+
+        var x;
+
+        try{
+            if(x == 0)
+            {
+                throw "Yes Im Awesome";
+            }
+            else 
+            {
+                throw "X is not Defined";
+            }
+        }
+        catch(e2){
+            document.getElementById('custom').innerText = e2;
+        }
+
+        var num = 5;
+
+        try {
+            num = num.toUpperCase();
+        }
+        catch (e3)
+        {
+            document.getElementById('type').innerText = e3
+        }
+
+        var name = "Yes"
+
+        try{
+            function n()
+            {
+                var a = 20;
+            }
+        }
+        catch(e4)
+        {
+            document.getElementById('syntax').innerText = e4;
+        }
+    </script>
+</html>
