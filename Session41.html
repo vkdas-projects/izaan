@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Session 41</title>
+        <style>
+            body{
+                text-align: center;
+                font-family: cursive;
+                background: linear-gradient(yellow,orange);
+            }
+            input {
+                width: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Errors and Regex</h1>
+        <input placeholder="Only enter digits between 1 - 10" type="text" id="userInput">
+        <button onclick="showUserInput()">Click Me</button> 
+        <h3 id="showInput"></h3>
+    </body>    
+    <script>
+
+        function showUserInput()
+        {
+            var userInput = parseInt(document.getElementById('userInput').value);
+            var showinput = document.getElementById('showInput');
+
+            try{
+                if(userInput < 1)
+                {
+                    throw("Error!!! The user has given an input less than 1")
+                }
+                else if(userInput > 10)
+                {
+                    throw("Error!!! The user has given an input more than 10")
+                }
+                else 
+                {
+                    throw("YAAAY!!! No Error");
+                }
+
+            }
+            catch(e)
+            {
+            
+                showinput.innerText = e;
+            }
+        }
+    </script>
+</html>
