@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Session 42</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+            *{
+                font-family: 'Lobster Two', cursive;
+            }
+            body{
+                background-color: #261C2C;
+                color: #5C527F;
+                text-align: center;
+            }
+            input, button {
+                padding: 10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>REGEX</h1>
+        <input id="textbox" type="text" placeholder="Enter Text">
+        <button onclick="regex()">Check</button>
+        <button onclick="regex2()">Check Value</button>
+        <h2 id="output"></h2>
+    </body>
+    <script>
+        function regex()
+        {
+            var userInput = document.getElementById('textbox').value;
+            var output = document.getElementById('output');
+            if( userInput.match(/[a-e]/) != null )
+            {
+                output.innerHTML = "The Value entered is a Match";
+            }
+            else
+            {
+                output.innerHTML = "The Value is not a Match"
+            }
+        }
+
+        function regex2()
+        {
+            var userInput = document.getElementById('textbox').value;
+            var output = document.getElementById('output');
+            var pattern = /[a-e]/;
+
+            var result = userInput.match(pattern);
+
+            output.innerHTML = result;
+        }
+    </script>
+</html>

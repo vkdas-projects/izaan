@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title>Session 43 & 44</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@500&display=swap');
+            *{
+                font-family: 'Yanone Kaffeesatz', sans-serif;
+            }
+
+            body {
+                text-align: center;
+                background-color: #444941;
+                color: #7FC8A9;
+                font-size: 20px;    
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+            fieldset {
+                padding: 50px;
+                background-color: #5F7A61;
+                border-radius: 10px;
+               
+            }
+
+            input {
+                padding: 10px;
+                margin-bottom: 20px;
+                border-radius: 10px;
+                border: 2px solid black;
+            }
+
+            button{
+                padding: 10 20px;
+                background-color: #D5EEBB;
+                border-radius: 10px;
+                border: 5px solid #7FC8A9;
+                transition: 0.2s ease-in;
+            }
+
+            button:hover{
+                background-color: orange;
+                color: white;
+                border: 5px solid crimson;
+                cursor: pointer;
+            }
+
+            legend{
+                
+               
+                color: white;
+                font-size: 50px;
+
+            }
+
+            form {
+                margin-bottom: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>User Registration Form</legend>
+                <label for="first-name">Enter First Name : </label>
+                <input type="text" placeholder="Enter Value"><br>
+                <label for="lastt-name">Enter LastName : </label>
+                <input type="text" placeholder="Enter Value"><br>
+                <label for="email">Enter Email-ID : </label>
+                <input id="emailInput" type="text" placeholder="Enter Value"><br>
+                <label for="password">Enter Password : </label>
+                <input type="text" placeholder="Enter Value"><br>
+                <button onclick="Validate()">Register</button>
+            </fieldset>
+        </form>
+    </body>
+
+    <script>
+
+        function Validate()
+        {
+            var emailInput = document.getElementById('emailInput').value;
+            var pattern = /^[a-z]|^[a-z][0-9]+@+[a-z]+.com/;
+
+            if(emailInput.match(pattern) != null)
+            {
+                alert("User Registered")
+            }
+            else
+            {
+                alert("User Not Registered. Please Try Again !!!")
+            }
+        }
+    </script>
+
+</html>
